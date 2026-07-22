@@ -1,6 +1,6 @@
 <?php
 // Incluir la conexión
-include 'conexion.php';
+include __DIR__ . '/Conexion.php';
 
 $mensaje = "";
 
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuarios</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
 
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Mostrar mensajes de éxito o error -->
         <?php echo $mensaje; ?>
 
-        <form action="registro.php" method="POST">
+        <form action="Register_Users.php" method="POST">
             <div class="grupo-input">
                 <label for="nombres">Nombres</label>
                 <input type="text" id="nombres" name="nombres" required>
