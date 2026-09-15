@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$user = "root";       
-$password = "root";       
-$database = "Practicas";
+$host = getenv('DB_HOST') ?: 'localhost';
+$user = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASSWORD') ?: 'root';
+$database = getenv('DB_NAME') ?: 'Practicas';
 
 // Crear la conexión
 $conexion = mysqli_connect($host, $user, $password, $database);
